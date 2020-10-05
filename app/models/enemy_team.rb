@@ -1,0 +1,2 @@
+class EnemyTeam < ApplicationRecord
+end

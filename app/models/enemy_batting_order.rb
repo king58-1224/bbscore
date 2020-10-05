@@ -1,0 +1,2 @@
+class EnemyBattingOrder < ApplicationRecord
+end

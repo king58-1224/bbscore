@@ -1,0 +1,2 @@
+class BattersBoxResult < ApplicationRecord
+end

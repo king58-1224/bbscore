@@ -1,0 +1,2 @@
+class EnemyPosition < ApplicationRecord
+end

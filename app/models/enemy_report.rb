@@ -1,0 +1,2 @@
+class EnemyReport < ApplicationRecord
+end

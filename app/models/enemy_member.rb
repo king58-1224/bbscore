@@ -1,0 +1,2 @@
+class EnemyMember < ApplicationRecord
+end
