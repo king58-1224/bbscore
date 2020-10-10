@@ -1,0 +1,16 @@
+.top-page-header{
+	height:150vh;
+	width: 100%;
+	background-color: green;
+	display: flex;
+	flex-direction: column;
+ }
+
+.lists-right{
+	display: flex;
+	justify-content: flex-end;
+}
+
+li{
+	list-style: none;
+}
