@@ -1,1 +1,29 @@
-<h2>toppage</h2>
+<div class="bb-header">
+  <header class='top-page-header'>
+    <div class='title'>
+      <h1>bbscore</h1>
+    </div>
+    <div class='nav'>
+      <ul class='lists-right'>
+        <% if team_signed_in? %>
+        <%# チーム名を記載 %>
+          <li><%= link_to '(仮)', "#", class: "team-name" %></li>
+          <li><%= link_to 'ログアウト', destroy_team_session_path, method: :delete, class: "logout" %></li>
+        <% else %>
+          <li><%= link_to 'ログイン', new_team_session_path, class: "login" %></li>
+          <li><%= link_to '新規登録', new_team_registration_path, class: 'sign-up' %></li>
+        <% end %>
+      </ul>
+    </div>
+  </header>
+</div>
+
+<div class="games">
+    <ul class='lists-center'>
+      <li><%= link_to '試合登録', '#', class: "game-regster" %></li>
+      <li><%= link_to '選手登録', '#', class: 'player-regster' %></li>
+    </ul>
+</div>
+
+<div class="bb-footer">
+</div>

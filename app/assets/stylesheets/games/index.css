@@ -1,0 +1,25 @@
+.top-page-header{
+	height:150px;
+	width: 100%;
+	background-color: green;
+	display: flex;
+	flex-direction: column;
+ }
+
+ .login{
+	 font-size: 30px;
+
+ }
+
+.sign-up{
+	font-size: 30px;
+}
+
+.lists-right{
+	display: flex;
+	justify-content: flex-end;
+}
+
+li{
+	list-style: none;
+}
