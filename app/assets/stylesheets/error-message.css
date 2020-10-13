@@ -1,0 +1,15 @@
+.error-alert {
+  font-size: 10px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.error-message {
+  font-size: 15px;
+  text-align: center;
+  color: rgb(182, 48, 0);
+}
+
+.field_with_errors {
+  display: contents;
+}

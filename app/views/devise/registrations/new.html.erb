@@ -1,33 +1,31 @@
-<h2>Sign up</h2>
+<h2>チーム情報入力</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+  <div class='form-text-wrap'>
+    <label class="form-text">チーム名（必須）</label><br>
+    <%= f.text_field :name, class:"input-default", autofocus: true, autocomplete: "name", placeholder:"例) 野球野郎" %>
   </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  <div class='form-text-wrap'>
+    <label class="form-text">メールアドレス（必須）</label><br />
+    <%= f.email_field :email, class:"input-default", autofocus: true, autocomplete: "email", placeholder:"PC・携帯どちらでも可" %>
   </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+  <div class='form-text-wrap'>
+    <label class="form-text">パスワード（必須）</label>
+    <p class='info-text'>※英字と数字の両方を含めて設定してください※</p>
+    <%= f.password_field :password, class:"input-default", autocomplete: "new-password", placeholder:"6文字以上の半角英数字" %>
   </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  <div class='form-text-wrap'>
+    <label class="form-text">チーム名（必須）</label><br />
+    <%= f.password_field :password_confirmation, class:"input-default", autocomplete: "new-password", placeholder:"同じパスワードを入力して下さい" %>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
+  <div class="register-btn">
+    <%= f.submit "チーム登録", class:"register-red-btn" %>
   </div>
 <% end %>
 
