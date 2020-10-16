@@ -7,7 +7,7 @@
       <ul class='lists-right'>
         <% if team_signed_in? %>
         <%# チーム名を記載 %>
-          <li><%= link_to '(仮)', "#", class: "team-name" %></li>
+          <li><%= link_to "#{current_team.name}", class: "team-name" %></li>
           <li><%= link_to 'ログアウト', destroy_team_session_path, method: :delete, class: "logout" %></li>
         <% else %>
           <li><%= link_to 'ログイン', new_team_session_path, class: "login" %></li>
