@@ -2,7 +2,7 @@
 	background-color: gray;
 	height: 150px;
 	width: 100vw;
-  padding: 2vh 15vw;
+  padding: 2px 15px;
   display: flex;
   flex-direction: column;
  }
@@ -10,7 +10,9 @@
  h1 {
   font-family: 'Exo', sans-serif;
   color: #f90;
-  font-size: 50px;
+  font-size: 100px;
+  position: absolute;
+  left: 20px;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
@@ -112,7 +114,7 @@ li{
 } 
 
 .main{
-	height: calc(96vh - 200px);
+	height: calc(100vh - 200px);
   background-image: url("/images/baseball.jpg");
 }
 
