@@ -1,0 +1,75 @@
+h2 {
+  height:10vh;
+  color: crimson;
+  text-align: center;
+}
+
+.form-text-wrap {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-text {
+  font-size: 20px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.actions {
+  font-size: 30px;
+  text-align: center;
+}
+
+.links {
+  text-align: center;
+}
+
+.input-default {
+  width: 30%;
+  height: 30px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 20px;
+  resize: none;
+}
+
+.info-text {
+  font-size: large;
+}
+
+.register-btn {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.register-red-btn {
+  width: 100%;
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: #fff;
+  line-height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+.session-btn {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.session-red-btn {
+  width: 100%;
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: #fff;
+  line-height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 30px;
+  font-weight: bold;
+}
