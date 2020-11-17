@@ -1,0 +1,39 @@
+<div class="members-main">
+	<div class="teams">
+		<h1>チーム名選手登録</h1>
+	</div>
+	<form>
+	<div class="members">
+		<table class="members-new">
+    	<tr class="members-new-tr-1">
+      	<th class="uniform-number">背番号</th>
+      	<th class="grade">学年</th>
+      	<th class="first-name">姓</th>
+				<th class="last-name">名</th>
+    	</tr>
+			<tr class="members-new-tr-2">
+      	<td class="uniform-number">
+					<input type="text" style="width: 30%; height: 30px; font-size:24px;"/>
+				</td>
+      	<td class="grade">
+					<input type="text" style="width: 30%; height: 30px; font-size:24px;"/>
+				</td>
+				<td class="first-name">
+					<input type="text" style="width: 50%; height: 30px; font-size:24px;"/>
+				</td>
+				<td class="last-name">
+					<input type="text" style="width: 50%; height: 30px; font-size:24px;"/>
+				</td>
+    	</tr>
+		</table>
+	</div>
+	<div class="btn">
+		 <input type="submit" value="登録" class="members-btn">
+	  	<%= link_to '一覧', members_path, class: 'btn-members-index' %>
+	</div>
+	</form>
+</div>
+
+
+
+
