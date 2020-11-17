@@ -1,0 +1,80 @@
+.member-index-label{
+  color: green;
+  font-size: 24px;
+  text-align: center;
+}
+.member-index-title{
+  text-align: left;
+  padding: 10px 10px 10px 10px;
+  font-size: 30px;
+  color: rgb(255, 136, 0);
+}
+
+.index-box{
+  margin: 0 20px;
+  
+}
+
+.member-index{
+  
+  font-size: 18px;
+  text-align: center;
+  color: white;
+}
+
+.member-number{
+  width: 10%;
+  border: 1px solid lightgray;
+
+}
+.member-index-grade{
+ width: 10%;
+  border: 1px solid lightgray;
+}
+.member-index-last-name{
+  width: 200px;
+  border: 1px solid lightgray;
+}
+.member-index-first-name{
+  width: 200px;
+  border: 1px solid lightgray;
+}
+.btn-member-index-edit{
+  font-size: 15px;
+	display: inline-block;
+  padding: 7px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  color: #FFF;
+  background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+	transition: .4s;
+	margin-top: 30px;
+}
+
+.btn-member-index-edit:hover{
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  border-bottom: none;
+}
+.btn-member-index-delete{
+  font-size: 15px;
+	display: inline-block;
+  padding: 7px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  color: #FFF;
+  background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+	transition: .4s;
+	margin-top: 30px;
+}
+
+.btn-member-index-delete:hover{
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  border-bottom: none;
+}
+
+.member-index-main{
+  height: calc(100vh);
+	background-image: url("/images/background-image-dark.jpeg");
+}
