@@ -1,5 +1,4 @@
 .top-page-header{
-	background-color: gray;
 	height: 150px;
 	width: 100vw;
   padding: 2px 15px;
@@ -7,7 +6,7 @@
   flex-direction: column;
  }
 
- h1 {
+ .title h1 {
   font-family: 'Exo', sans-serif;
   color: #f90;
   font-size: 80px;
@@ -139,14 +138,12 @@ li{
   border-bottom: none;
 } 
 
-.main{
-	height: calc(100vh - 200px);
-  background-image: url("/images/baseball.jpg");
+.games-main-index{
+	height: calc(100vh);
+  background-image: url("/images/background-image-dark.jpeg");
 }
-
 
 
 .bb-footer{
 	height: 50px;
-	background-color:gray;
 }
