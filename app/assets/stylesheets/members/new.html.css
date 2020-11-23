@@ -22,64 +22,78 @@
 .members{
 	justify-content: center;
 	display: flex;
-	/* background-color: purple; */
 }
 
 .members-new{
 	width: 80%;
 	display: flex;
 	justify-content: center;
-	/* background-color: mediumvioletred; */
 }
 
 .members-new-tr-1{
 	width: 1000px;
-	color: green;justify-content: center;
+	color: green;
 	display: flex;
-	/* background-color: khaki; */
 	
 }
 
 .members-new-tr-2{
 	width: 1000px;
-	justify-content: center;
 	display: flex;
-	/* background-color: orange; */
 }
 
 .uniform-number{
 	width: 20%;
 	display: flex;
 	justify-content: center;
-	/* background-color: palevioletred; */
+}
+
+.input-uniform-number{
+	width: 30%; 
+	font-size:24px;
+	text-align: center;
 }
 
 .grade{
 	width: 20%;
 	display: flex;
 	justify-content: center;
-	/* background-color: coral; */
+}
+
+.input-grade{
+	width: 30%; 
+	font-size:24px;
+	text-align: center;
 }
 
 .first-name{
 	width: 50%;
 	display: flex;
 	justify-content: center;
-	/* background-color: yellowgreen; */
+}
+
+.input-first-name{
+	width: 50%; 
+	font-size:24px;
+	text-align: center;
 }
 
 .last-name{
 	width: 50%;
 	display: flex;
 	justify-content: center;
-	/* background-color: violet; */
 }
+
+.input-last-name{
+	width: 50%; 
+	font-size:24px;
+	text-align: center;
+}
+
 .members-btn{
 	font-size: 30px;
-	display: inline-block;
   padding: 7px 20px;
   border-radius: 25px;
-  text-decoration: none;
   color: #FFF;
   background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
 	transition: .4s;
@@ -95,10 +109,8 @@
 
 .btn-members-index{
 	font-size: 30px;
-	display: inline-block;
   padding: 7px 20px;
   border-radius: 25px;
-  text-decoration: none;
   color: #FFF;
   background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
 	transition: .4s;
