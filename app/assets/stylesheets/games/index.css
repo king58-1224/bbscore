@@ -138,10 +138,7 @@ li{
 .games-main-index{
 	height: calc(100vh);
   background-image: 
-    url("/images/background-image-dark.jpeg"),
-    url("/images/dark-ball.jpeg");
-  background-repeat:
-    repeat;
+    url("/images/background-image-dark.jpeg")
 }
 
 
