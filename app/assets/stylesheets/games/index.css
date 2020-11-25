@@ -1,35 +1,41 @@
 .top-page-header{
-	background-color: gray;
 	height: 150px;
 	width: 100vw;
   padding: 2px 15px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
  }
 
- h1 {
+ .title{
   font-family: 'Exo', sans-serif;
   color: #f90;
-  font-size: 100px;
-  position: absolute;
+  font-size: 80px;
   left: 20px;
-  text-transform: uppercase;
   margin-bottom: 20px;
 }
 
+.lists-right{
+  margin: 0;
+  padding: 40px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 50px;
+}
+
+li{
+	list-style: none;
+}
  .login{
+  width: 150px;
 	font-size: 30px;
-	display: inline-block;
+  display: inline-block;
+  text-align: center;
   padding: 7px 20px;
   border-radius: 25px;
   text-decoration: none;
   color: #FFF;
   background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
 	transition: .4s;
-	position: absolute;
-	top: 80px;
-  right: 300px;
-	 
  }
 
  .login:hover{
@@ -39,17 +45,17 @@
  }
 
 .sign-up{
+  width: 150px;
 	font-size: 30px;
-	display: inline-block;
+  display: inline-block;
+  text-align: center;
   padding: 7px 20px;
   border-radius: 25px;
   text-decoration: none;
   color: #FFF;
   background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
 	transition: .4s;
-	position: absolute;
-	top: 80px;
-	right: 100px;
+	
 }
 
 .sign-up:hover{
@@ -58,33 +64,53 @@
   border-bottom: none;
 }
 
-.lists-right{
-	display: flex;
-	justify-content: space-around;
-}
-
-li{
-	list-style: none;
-}
-
-.lists-center{
-	display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-	height: 100%;
-}
-.game-regster{
-	font-size: 30px;
+.team-name{
+  font-size: 30px;
 	display: inline-block;
   padding: 7px 20px;
   border-radius: 25px;
   text-decoration: none;
   color: #FFF;
   background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+	transition: .4s;
+}
+
+.team-name:hover{
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  border-bottom: none;
+}
+
+.logout{
+  font-size: 30px;
+	display: inline-block;
+  padding: 7px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  color: #FFF;
+  background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+	transition: .4s;
+}
+
+.logout:hover{
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  border-bottom: none;
+}
+
+.lists-center{
+  padding: 300px;
+  display: flex;
+  gap: 50px;
+}
+.game-regster{
+	font-size: 50px;
+	display: inline-block;
+  padding: 7px 20px;
+  border-radius: 25px;
+  color: #FFF;
+  background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
   transition: .4s;
-  position: absolute;
-  top: 1000px;
-  right: 100px;
 }
 
 .game-regster:hover{
@@ -94,17 +120,13 @@ li{
 }
 
 .player-regster{
-	font-size: 30px;
+	font-size: 50px;
 	display: inline-block;
   padding: 7px 20px;
   border-radius: 25px;
-  text-decoration: none;
   color: #FFF;
   background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
   transition: .4s;
-  position: absolute;
-  top: 1000px;
-  right: 300px;
 }
 
 .player-regster:hover{
@@ -113,14 +135,13 @@ li{
   border-bottom: none;
 } 
 
-.main{
-	height: calc(100vh - 200px);
-  background-image: url("/images/baseball.jpg");
+.games-main-index{
+	height: calc(100vh);
+  background-image: 
+    url("/images/background-image-dark.jpeg")
 }
-
 
 
 .bb-footer{
 	height: 50px;
-	background-color:gray;
 }
