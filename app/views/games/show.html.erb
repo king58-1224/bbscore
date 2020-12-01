@@ -1,1 +1,24 @@
-sssssss
+<% array = [A,B,C,D,E,F,G,H,I]%>
+
+<table>
+  <thead>
+    <tr>
+      <th>打席/回数</th>
+      <td></td>
+      <% 9.times do |i| %>
+        <td><%= i %></td>
+      <% end %>
+    </tr>
+  </thead>
+  <body>
+    <% 9.times do |r| %>
+      <tr>
+        <th><%= r %><th>
+        <td><%= array[r-1]%></td>
+        <% 9.times do |c| %>
+          <td class="height<%= r %> width<%= c %>"><%= c %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </body>
+</table>
