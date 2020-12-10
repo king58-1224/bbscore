@@ -26,9 +26,9 @@
 }
 
 .game-date{
-	width: 200px; 
+	width: 250px; 
 	height: 50px;
-	font-size:24px;
+	font-size:20px;
 	text-align: center;
 }
 .orders{
@@ -40,7 +40,7 @@
 	margin-top: 20px;
 }
 
-.orders-new-tr-1{
+.orders-new-registration{
 	width: 100%;
 	height: 40px;
 	color:green;
@@ -72,16 +72,11 @@
 	font-size:24px;
 }
 
-.orders-new-tr-2{
-	width: 100%;
-	height: 40px;
-	display: flex;
-}
-
 .input-form-1{
 	width: 20%;
 	display: flex;
 	justify-content: center;
+	color: white;
 }
 .input-game-batting-order{
 	width: 30%; 
@@ -135,9 +130,9 @@
 	justify-content: center;
 }
 .input-game-defensive{
-	width: 30%; 
+	width: 50%; 
 	height: 30px;
-	font-size:24px;
+	font-size:20px;
 	text-align: center;
 }
 
@@ -158,7 +153,6 @@
 }
 
 .games-main{
-	height: calc(100vh);
 	background-image: url("/images/background-image-dark.jpeg");
 }
 
