@@ -3,15 +3,20 @@ class MembersController < ApplicationController
     @members = Member.all
 	end
 
-	def new
-    @member = Member.new
+  def new
+    if team_signed_in?
+      @members = OrderCollection.new
+    else
+      return redirect_to new_team_session_path
+    end
   end
 
   def create
-    @member = Member.new(member_params)
-    if @member.valid?
-      @member.save
-      return redirect_to members_path
+    @members = OrderCollection.new(orders_params)
+    binding.pry
+    if @members.valid?
+      @members.save
+      return redirect_to root_path
     else
       render :new
     end
@@ -47,5 +52,7 @@ class MembersController < ApplicationController
     params.require(:member).permit(:uniform_number, :grade, :first_name,:last_name).merge(team_id: current_team.id)
   end
 
-
+  def orders_params
+    params.require(:members)
+  end
 end
