@@ -3,16 +3,16 @@
 		<h1>チーム名選手登録</h1>
 	</div>
 	<%= form_with(model: @members, url: members_path, local: true) do |form| %>
-    <% @members.collection.each do |member| %>
-      <%= fields_for 'members[]', member do |field| %>
-				<div class="members">
-					<table class="members-new">
-						<tr class="members-new-tr-1">
-							<th class="uniform-number">背番号</th>
-							<th class="grade">学年</th>
-							<th class="first-name">姓</th>
-							<th class="last-name">名</th>
-						</tr>
+		<div class="members">
+			<table class="members-new">
+				<tr class="members-new-tr-1">
+					<th class="uniform-number">背番号</th>
+					<th class="grade">学年</th>
+					<th class="first-name">姓</th>
+					<th class="last-name">名</th>
+				</tr>
+				<% @members.collection.each do |member| %>
+					<%= fields_for 'members[]', member do |field| %>
 						<tr class="members-new-tr-2">
 							<%= field.hidden_field :team_id, value:current_team.id %>
 							<td class="uniform-number">
@@ -28,10 +28,10 @@
 								<%= field.text_field :last_name, class:"input-last-name" %>
 							</td>
 						</tr>
-					</table>
-				</div>
-			<% end %>
-		<% end %>
+					<% end %>
+				<% end %>
+			</table>
+		</div>
 		<div class="btn">
 			<%= form.submit "登録", class:"members-btn" %>
 			<%= link_to '一覧', members_path, class: 'btn-members-index' %>

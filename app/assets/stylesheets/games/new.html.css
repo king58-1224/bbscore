@@ -1,12 +1,12 @@
 .games{
+	height: 200px;
 	display: flex;
 	justify-content: center;
-	height: 200px;
+	align-items: center;
 }
 
 .game-registration{
 	font-size: 50px;
-	margin-top: 50px;
 	font-family: 'Exo', sans-serif;
 	color: #f90;
 }
@@ -45,6 +45,7 @@
 	height: 40px;
 	color:green;
 	display: flex;
+	margin-bottom: 10px;
 }
 
 .game-batting-order{
@@ -130,10 +131,9 @@
 	justify-content: center;
 }
 .input-game-defensive{
-	width: 50%; 
+	width: 40%; 
 	height: 30px;
 	font-size:20px;
-	text-align: center;
 }
 
 .btn-games-index{
