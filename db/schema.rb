@@ -48,12 +48,12 @@ ActiveRecord::Schema.define(version: 2020_10_09_104057) do
 
   create_table "enemy_positions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "game_id", null: false
-    t.bigint "enemy_member_id_id", null: false
-    t.bigint "position_id_id", null: false
+    t.bigint "enemy_member_id", null: false
+    t.bigint "position_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["enemy_member_id_id"], name: "index_enemy_positions_on_enemy_member_id_id"
-    t.index ["position_id_id"], name: "index_enemy_positions_on_position_id_id"
+    t.index ["enemy_member_id"], name: "index_enemy_positions_on_enemy_member_id"
+    t.index ["position_id"], name: "index_enemy_positions_on_position_id"
   end
 
   create_table "enemy_reports", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -93,12 +93,12 @@ ActiveRecord::Schema.define(version: 2020_10_09_104057) do
 
   create_table "positions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "game_id", null: false
-    t.bigint "member_id_id", null: false
-    t.bigint "position_id_id", null: false
+    t.bigint "member_id", null: false
+    t.bigint "position_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["member_id_id"], name: "index_positions_on_member_id_id"
-    t.index ["position_id_id"], name: "index_positions_on_position_id_id"
+    t.index ["member_id"], name: "index_positions_on_member_id"
+    t.index ["position_id"], name: "index_positions_on_position_id"
   end
 
   create_table "reports", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
