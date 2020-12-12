@@ -23,6 +23,7 @@
 	height: 50px;
 	font-size:24px;
 	text-align: center;
+	border: 1px solid blue;
 }
 
 .game-date{
@@ -30,6 +31,7 @@
 	height: 50px;
 	font-size:20px;
 	text-align: center;
+	border: 1px solid blue;
 }
 .orders{
 	justify-content: center;
@@ -85,6 +87,7 @@
 	font-size:24px;
 	text-align: center;
 	justify-content: center;
+	border: 1px solid blue;
 }
 
 .input-form-2{
@@ -98,6 +101,7 @@
 	height: 30px;
 	font-size:24px;
 	text-align: center;
+	border: 1px solid blue;
 }
 
 .input-form-3{
@@ -111,6 +115,7 @@
 	height: 30px;
 	font-size:24px;
 	text-align: center;
+	border: 1px solid blue;
 }
 
 .input-form-4{
@@ -123,6 +128,7 @@
 	height: 30px;
 	font-size:24px;
 	text-align: center;
+	border: 1px solid blue;
 }
 
 .input-form-5{
@@ -134,6 +140,7 @@
 	width: 40%; 
 	height: 30px;
 	font-size:20px;
+	border: 1px solid blue;
 }
 
 .btn-games-index{
