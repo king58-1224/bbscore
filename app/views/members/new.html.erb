@@ -2,8 +2,10 @@
 	<div class="teams">
 		<h1>チーム名選手登録</h1>
 	</div>
-		<form>
-			<div class="members">
+<%= form_with(model: @members, url: members_path, local: true) do |form| %>
+		<% @members.collection.each do |member| %>
+			<%= fields_for 'members[]', member do |field| %>
+				<div class="members">
 				<table class="members-new">
 					<tr class="members-new-tr-1">
 						<th class="uniform-number">背番号</th>
@@ -12,26 +14,34 @@
 						<th class="last-name">名</th>
 					</tr>
 				<tr class="members-new-tr-2">
+						<%= field.hidden_field :team_id, value: current_team.id %>
 					<td class="uniform-number">
-						<input type="text" class="input-uniform-number"/>
+						<%# <% <input type="text" class="input-uniform-number"/> %>
+						<%= field.text_field :uniform_number, class: "input-uniform-number" %>
 					</td>
 					<td class="grade">
-						<input type="text" class="input-grade"/>
+						<%# <% <input type="text" class="input-grade"/> %>
+						<%= field.text_field :grade, class: "input-grade" %>
 					</td>
 					<td class="first-name">
-						<input type="text" class="input-first-name"/>
+						<%# <% <input type="text" class="input-first-name"/> %>
+						<%= field.text_field :first_name, class: "input-first-name" %>
 					</td>
 					<td class="last-name">
-						<input type="text" class="input-last-name"/>
+						<%# <% <input type="text" class="input-last-name"/> %>
+						<%= field.text_field :last_name, class: "input-last-name" %>
 					</td>
 				</tr>
 				</table>
 			</div>
+			<% end %>
+		<% end %>
 		<div class="btn">
-			<input type="submit" value="登録" class="members-btn">
+			<%# <% <input type="submit" value="登録" class="members-btn"> %>
+			<%= form.submit "登録" %>
 			<%= link_to '一覧', members_path, class: 'btn-members-index' %>
 		</div>
-		</form>
+<% end %>
 </div>
 
 
