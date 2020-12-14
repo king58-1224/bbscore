@@ -2,10 +2,12 @@
 <div class="games">
 	<div class="game-registration">試合登録画面</div>
 </div>
-<form>
+<%= form_with model: @game, local: true do |f| %>
 	<div class="game-inputs">
-		<input type="text" placeholder="大会名" class="tournament"/>
-		<input type="text" placeholder="日付" class="game-date"/>
+		<%# <input type="text" placeholder="大会名" class="tournament"/> %>
+		<%= f.text_field :game_name, placeholder:"大会名", class:"tournament" %>
+		<%# <input type="text" placeholder="日付" class="game-date"/> %>
+		<%= f.date_field :game_day, placeholder:"日付", class:"game-date" %>
 	</div>
 	<div class="orders">
 	<table class="orders-new">
@@ -16,16 +18,24 @@
 			<th class="game-full-name">名前</th>
 			<th class="game-defensive">守備</th>
 		<tr class="orders-new-tr-2">
-			<td class="input-form-1"><input type="text" class="input-game-batting-order"/></td>
-			<td class="input-form-2"><input type="text" class="input-game-uniform-number"/></td>
-			<td class="input-form-3"><input type="text" class="input-game-grade"/></td>
-			<td class="input-form-4"><input type="text" class="input-game-full-name"/></td>
-			<td class="input-form-5"><input type="text" class="input-game-defensive"/></td>
+		<%= f.fields_for :batting_orders do |b| %>
+			<td class="input-form-1">
+					<%= b.text_field :batting_number, class: "input-game-batting-order" %></td>
+			<td class="input-form-2">
+					<%= b.hidden_field :member_id, value: 1 %>
+					<input type="text" class="input-game-uniform-number"/></td>
+			<td class="input-form-3">
+					<input type="text" class="input-game-grade"/></td>
+			<td class="input-form-4">
+					<input type="text" class="input-game-full-name"/></td>
+			<td class="input-form-5">
+					<%= b.collection_select(:position_id, Position.all, :id, :name, {}, {class: "input-game-defensive"}) %></td>
+		<% end %>
 		</tr>
 	</table>
 	</div>
 	<div class="btn">
-		<%= link_to '登録', "#", class: 'btn-games-index' %>
+		<%= f.submit '登録', class: 'btn-games-index' %>
 	</div>
-</form>
+<% end %>
 </div>
