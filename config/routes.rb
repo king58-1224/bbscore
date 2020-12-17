@@ -4,5 +4,8 @@ Rails.application.routes.draw do
   resources :members
   resources :games do
     resources :batting_orders
+    collection do
+      get 'search_member'
+    end
   end
 end

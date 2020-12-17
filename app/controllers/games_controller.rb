@@ -21,6 +21,11 @@ class GamesController < ApplicationController
     end
   end
 
+  def search_member
+    member = Member.find_by(uniform_number: params[:keyword])
+    render json:{ member: member }
+  end
+
   private
 
   def games_params
