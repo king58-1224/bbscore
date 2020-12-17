@@ -19,10 +19,10 @@
 				<%= form.fields_for :batting_orders do |field| %>
 					<tr class="orders-new-registration">
 						<td class="input-form-1">
-							<%= field.text_field :batting_number, class:"input-game-number" %>
+							<%= field.text_field :batting_number, class:"input-game-uniform-number" %>
 						</td>
 						<td class="input-form-2">
-							<%= field.hidden_field :member_id, class:"input-member-id" %>
+							<%= field.hidden_field :member_id, value:7 %>
 							<input type="text" class="input-game-uniform-number"/>
 						</td>
 						<td class="input-form-3">
