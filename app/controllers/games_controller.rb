@@ -22,7 +22,7 @@ class GamesController < ApplicationController
   end
 
   def search_member
-    member = Member.find_by(uniform_number: params[:keyword])
+    member = Member.find_by(uniform_number: params[:keyword], team_id: current_team.id)
     render json:{ member: member }
   end
 
