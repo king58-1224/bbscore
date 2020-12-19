@@ -1,31 +1,45 @@
 <div class="games-main">
-<div class="games">
-	<div class="game-registration">試合登録画面</div>
-</div>
-<form>
-	<div class="game-inputs">
-		<input type="text" placeholder="大会名" class="tournament"/>
-		<input type="text" placeholder="日付" class="game-date"/>
+	<div class="games">
+		<div class="game-registration">試合登録画面</div>
 	</div>
-	<div class="orders">
-	<table class="orders-new">
-		<tr class="orders-new-tr-1">
-			<th class="game-batting-order">打順</th>
-			<th class="game-uniform-number">背番号</th>
-			<th class="game-grade">学年</th>
-			<th class="game-full-name">名前</th>
-			<th class="game-defensive">守備</th>
-		<tr class="orders-new-tr-2">
-			<td class="input-form-1"><input type="text" class="input-game-batting-order"/></td>
-			<td class="input-form-2"><input type="text" class="input-game-uniform-number"/></td>
-			<td class="input-form-3"><input type="text" class="input-game-grade"/></td>
-			<td class="input-form-4"><input type="text" class="input-game-full-name"/></td>
-			<td class="input-form-5"><input type="text" class="input-game-defensive"/></td>
-		</tr>
-	</table>
-	</div>
-	<div class="btn">
-		<%= link_to '登録', "#", class: 'btn-games-index' %>
-	</div>
-</form>
+	<%= form_with(model: @game, url: games_path, local: true) do |form| %>
+		<div class="game-inputs">
+			<%= form.text_field :game_name, placeholder:"大会名", class:"tournament" %>
+			<%= form.date_field :game_day, class:"game-date", placeholder:"日付", min: Date.current %>
+		</div>
+		<div class="orders">
+			<table class="orders-new">
+				<tr class="orders-new-registration">
+					<th class="game-batting-order">打順</th>
+					<th class="game-uniform-number">背番号</th>
+					<th class="game-grade">学年</th>
+					<th class="game-full-name">名前</th>
+					<th class="game-defensive">守備</th>
+				</tr>
+				<%= form.fields_for :batting_orders do |field| %>
+					<tr class="orders-new-registration">
+						<td class="input-form-1">
+							<%= field.text_field :batting_number, class:"input-game-number" %>
+						</td>
+						<td class="input-form-2">
+							<%= field.hidden_field :member_id, class:"input-member-id" %>
+							<input type="text" class="input-game-uniform-number"/>
+						</td>
+						<td class="input-form-3">
+							<input type="text" class="input-game-grade"/>
+						</td>
+						<td class="input-form-4">
+							<input type="text" class="input-game-full-name"/>
+						</td>
+						<td class="input-form-5">
+							<%= field.collection_select(:position_id, Position.all, :id, :name, {}, {class:"input-game-defensive"}) %>
+						</td>
+					</tr>
+				<% end %>
+			</table>
+		</div>
+		<div class="btn">
+			<%= form.submit "登録", class:"btn-games-index" %>
+		</div>
+	<% end %>
 </div>

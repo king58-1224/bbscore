@@ -1,13 +1,15 @@
 .teams {
+	height: 200px;
+	width: 100%;
 	font-size: 30px;
 	display: flex;
 	justify-content: center;
-	height: 200px;
-	width: 100%;
+	align-items: center;
 }
 
 .teams h1{
-	margin-top: 50px;
+	font-size: 50px;
+	font-weight: normal;
 	font-family: 'Exo', sans-serif;
 	color: #f90;
 }
@@ -40,6 +42,7 @@
 .members-new-tr-2{
 	width: 1000px;
 	display: flex;
+	margin-bottom: 20px;
 }
 
 .uniform-number{
@@ -52,6 +55,7 @@
 	width: 30%; 
 	font-size:24px;
 	text-align: center;
+	border: 1px solid blue;
 }
 
 .grade{
@@ -64,6 +68,7 @@
 	width: 30%; 
 	font-size:24px;
 	text-align: center;
+	border: 1px solid blue;
 }
 
 .first-name{
@@ -76,6 +81,7 @@
 	width: 50%; 
 	font-size:24px;
 	text-align: center;
+	border: 1px solid blue;
 }
 
 .last-name{
@@ -88,6 +94,7 @@
 	width: 50%; 
 	font-size:24px;
 	text-align: center;
+	border: 1px solid blue;
 }
 
 .members-btn{
@@ -134,6 +141,5 @@
 } 
 
 .members-main{
-	height: calc(100vh);
   background-image: url("/images/background-image-dark.jpeg");
 } 
