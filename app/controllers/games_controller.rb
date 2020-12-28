@@ -1,11 +1,18 @@
 class GamesController < ApplicationController
+  MEMBER_COUNT = 8
+  
   def index
   end
 
   def new
     if team_signed_in?
-      @game = Game.new
-      9.times { @game.batting_orders.build }
+      @count = Member.where(team_id: current_team).count
+      if @count > MEMBER_COUNT
+        @game = Game.new
+        9.times { @game.batting_orders.build }
+      else
+        return redirect_to new_member_path
+      end
     else
       return redirect_to new_team_session_path
     end
@@ -13,6 +20,7 @@ class GamesController < ApplicationController
 
   def create
     @game = Game.new(games_params)
+
     if @game.valid?
       @game.save
       redirect_to root_path

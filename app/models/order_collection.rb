@@ -36,7 +36,7 @@ class OrderCollection
     ActiveRecord::Base.transaction do
       collection.each do |result|
         # バリデーションを全てかけたいからsave!ではなくsaveを使用
-        is_success = false unless result.save
+        is_success = false unless result.save!
       end
       # バリデーションエラーがあった時は例外を発生させてロールバックさせる
       raise ActiveRecord::RecordInvalid unless is_success
