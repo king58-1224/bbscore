@@ -1,20 +1,17 @@
 class GamesController < ApplicationController
+  before_action :authenticate_team!, only: :new
   MEMBER_COUNT = 8
   
   def index
   end
 
   def new
-    if team_signed_in?
-      @count = Member.where(team_id: current_team).count
-      if @count > MEMBER_COUNT
-        @game = Game.new
-        9.times { @game.batting_orders.build }
-      else
-        return redirect_to new_member_path
-      end
+    count = Member.where(team_id: current_team).count
+    if count > MEMBER_COUNT
+      @game = Game.new
+      9.times { @game.batting_orders.build }
     else
-      return redirect_to new_team_session_path
+      return redirect_to new_member_path
     end
   end
 

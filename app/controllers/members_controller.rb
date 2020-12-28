@@ -13,7 +13,6 @@ class MembersController < ApplicationController
 
   def create
     @members = OrderCollection.new(orders_params)
-    binding.pry
     if @members.valid?
       @members.save
       return redirect_to root_path
