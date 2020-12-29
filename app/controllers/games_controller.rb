@@ -1,15 +1,15 @@
 class GamesController < ApplicationController
   before_action :authenticate_team!, only: :new
-  MEMBER_COUNT = 8
+  MEMBER_COUNT = 9
   
   def index
   end
 
   def new
     count = Member.where(team_id: current_team).count
-    if count > MEMBER_COUNT
+    if count >= MEMBER_COUNT
       @game = Game.new
-      9.times { @game.batting_orders.build }
+      MEMBER_COUNT.times { @game.batting_orders.build }
     else
       return redirect_to new_member_path
     end
