@@ -1,27 +1,28 @@
 <div class="games-main-index">
-  <div class="bb-header">
-    <header class='top-page-header'>
-      
-        <h1 class='title'>B<span class=“title-sub”>ase</span>B<span class=“title-sub”>all</span> SCORE</h1>
-        <ul class='lists-right'>
-          <% if team_signed_in? %>
+  <header class='top-page-header'>
+    <div class="header-title">
+      <h1 class='title'>BaseBall Score</h1>
+    </div>
+    <ul class='lists-right'>
+      <% if team_signed_in? %>
         <%# チーム名を記載 %>
-            <li><%= link_to '(仮)', "#", class: "team-name" %></li>
-            <li><%= link_to 'ログアウト', destroy_team_session_path, method: :delete, class: "logout" %></li>
-          <% else %>
-            <li><%= link_to 'ログイン', new_team_session_path, class: "login" %></li>
-            <li><%= link_to '新規登録', new_team_registration_path, class: 'sign-up' %></li>
-          <% end %>
-        </ul>
-    </header>
-  </div>
+        <li class='login'><%= link_to current_team.name %></li>
+        <li><%= link_to 'ログアウト', destroy_team_session_path, method: :delete, class: "sign-up" %></li>
+      <% else %>
+        <li><%= link_to 'ログイン', new_team_session_path, class: "login" %></li>
+        <li><%= link_to '新規登録', new_team_registration_path, class: 'sign-up' %></li>
+      <% end %>
+    </ul>
+  </header>
   <div class= "main" >
-  <div class="games">
-      <ul class='lists-center'>
-        <li><%= link_to '試合登録', new_game_path, class: "game-regster" %></li>
-        <li><%= link_to '選手登録', new_member_path, class: 'player-regster' %></li>
-      </ul>
+    <ul class='lists-center'>
+      <li><%= link_to '試合登録', new_game_path, class: "game-regster" %></li>
+      <li><%= link_to '選手登録', new_member_path, class: 'player-regster' %></li>
+    </ul>
   </div>
+  <div class="bb-footer">
+    <div class="copyright-name">
+      COPYRIGHT &#169;bbscore  ALL RIGHTS RESERVED.
+    </div>
   </div>
-    <div class="bb-footer"></div>
 </div>

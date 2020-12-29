@@ -93,13 +93,13 @@ h2 {
 } 
 
 .sessions{
-  height: calc(100vh);
+  height: 100vh;
   background-image: 
     url("/images/background-image-dark.jpeg")
 }
 
 .registrations{
-  height: calc(100vh);
+  height: 100vh;
   background-image: 
     url("/images/background-image-dark.jpeg")
 }

@@ -71,6 +71,5 @@
 }
 
 .member-index-main{
-  height: calc(100vh);
-	background-image: url("/images/background-image-dark.jpeg");
+  background-image: url("/images/background-image-dark.jpeg");
 }
